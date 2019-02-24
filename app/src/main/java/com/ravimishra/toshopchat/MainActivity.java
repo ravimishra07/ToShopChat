@@ -7,14 +7,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements UserListFragment.OnFragmentInteractionListener {
-private FragmentManager fragmentManager;
-private FragmentTransaction fragmentTransaction;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,17 +25,10 @@ private FragmentTransaction fragmentTransaction;
         setSupportActionBar(toolbar);
 
 
-        fragmentManager=getSupportFragmentManager();
-        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.mainFrame, new UserListFragment()).commit();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
     }
 
     @Override
@@ -52,6 +47,7 @@ private FragmentTransaction fragmentTransaction;
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             return true;
         }
 
