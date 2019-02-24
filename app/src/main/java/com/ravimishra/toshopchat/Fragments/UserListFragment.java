@@ -1,4 +1,4 @@
-package com.ravimishra.toshopchat;
+package com.ravimishra.toshopchat.Fragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -6,19 +6,20 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.ravimishra.toshopchat.Adapters.DbAdapter;
+import com.ravimishra.toshopchat.Adapters.UserListRvAdapter;
+import com.ravimishra.toshopchat.R;
+import com.ravimishra.toshopchat.UserListModel;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.ravimishra.toshopchat;
+package com.ravimishra.toshopchat.Adapters;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import com.ravimishra.toshopchat.Constants;
+import com.ravimishra.toshopchat.DbHelper;
+import com.ravimishra.toshopchat.UserListModel;
 
 import java.util.ArrayList;
 
