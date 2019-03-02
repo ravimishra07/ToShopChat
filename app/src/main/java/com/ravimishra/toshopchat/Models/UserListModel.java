@@ -1,4 +1,4 @@
-package com.ravimishra.toshopchat;
+package com.ravimishra.toshopchat.Models;
 
 public class UserListModel {
     String userName;

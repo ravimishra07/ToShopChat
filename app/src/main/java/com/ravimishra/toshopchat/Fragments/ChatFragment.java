@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.ravimishra.toshopchat.R;
 
@@ -29,8 +30,17 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        String username = "", userID = "";
 
-        return inflater.inflate(R.layout.fragment_chat, container, false);
+        View view = inflater.inflate(R.layout.fragment_chat, container, false);
+
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            username = bundle.get("username").toString();
+            userID = bundle.get("userID").toString();
+        }
+        Toast.makeText(getActivity(), "" + username, Toast.LENGTH_SHORT).show();
+        return view;
     }
 
     public void onButtonPressed(Uri uri) {
@@ -55,7 +65,6 @@ public class ChatFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name

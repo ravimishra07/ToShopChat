@@ -9,7 +9,7 @@ import android.util.Log;
 
 import com.ravimishra.toshopchat.Constants;
 import com.ravimishra.toshopchat.DbHelper;
-import com.ravimishra.toshopchat.UserListModel;
+import com.ravimishra.toshopchat.Models.UserListModel;
 
 import java.util.ArrayList;
 

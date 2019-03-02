@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import com.ravimishra.toshopchat.Adapters.DbAdapter;
 import com.ravimishra.toshopchat.Adapters.UserListRvAdapter;
+import com.ravimishra.toshopchat.Models.UserListModel;
 import com.ravimishra.toshopchat.R;
-import com.ravimishra.toshopchat.UserListModel;
 
 import java.util.ArrayList;
 
@@ -69,7 +69,7 @@ public class UserListFragment extends Fragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         final View dialogView = inflater.inflate(R.layout.username_dialog_layout, null);
         builder.setView(dialogView);
-        editText = (EditText) dialogView.findViewById(R.id.etUsername);
+        editText = dialogView.findViewById(R.id.etUsername);
 
         builder.setTitle("Enter name of User");
         builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {

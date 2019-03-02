@@ -14,9 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ravimishra.toshopchat.Fragments.ChatFragment;
-import com.ravimishra.toshopchat.Fragments.UserListFragment;
+import com.ravimishra.toshopchat.Models.UserListModel;
 import com.ravimishra.toshopchat.R;
-import com.ravimishra.toshopchat.UserListModel;
 
 import java.util.ArrayList;
 
